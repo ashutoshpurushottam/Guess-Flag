@@ -9,15 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+    
+    @IBOutlet weak var topFlagButton: UIButton!
+    @IBOutlet weak var bottomFlagButton: UIButton!
+    @IBOutlet weak var centerFlagButton: UIButton!
+    
+    var score = 0
+    var countries = [String]()
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+        // Set image border on flag images
+        topFlagButton.layer.borderWidth = 1
+        centerFlagButton.layer.borderWidth = 1
+        bottomFlagButton.layer.borderWidth = 1
+        topFlagButton.layer.borderColor = UIColor.lightGrayColor().CGColor
+        centerFlagButton.layer.borderColor = UIColor.lightGrayColor().CGColor
+        bottomFlagButton.layer.borderColor = UIColor.lightGrayColor().CGColor
+        askQuestions()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func askQuestions()
+    {
+        topFlagButton.setImage(UIImage(named: countries[0]), forState: .Normal)
+        centerFlagButton.setImage(UIImage(named: countries[1]), forState: .Normal)
+        bottomFlagButton.setImage(UIImage(named: countries[2]), forState: .Normal)
+        
     }
 
 

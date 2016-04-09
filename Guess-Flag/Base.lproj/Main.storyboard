@@ -17,29 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-lp-6AZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-lp-6AZ">
                                 <rect key="frame" x="200" y="250" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="1Bf-9g-adi"/>
                                     <constraint firstAttribute="width" constant="200" id="ccR-7k-aIo"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Center" image="france"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yti-S1-teZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yti-S1-teZ">
                                 <rect key="frame" x="200" y="110" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="9Dq-RU-WDf"/>
                                     <constraint firstAttribute="height" constant="100" id="Vxs-3E-FVB"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Top" image="ireland"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epJ-GK-DrL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epJ-GK-DrL">
                                 <rect key="frame" x="200" y="390" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Abk-tP-2L0"/>
                                     <constraint firstAttribute="width" constant="200" id="mBR-UE-H0t"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Bottom" image="spain"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,6 +53,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t2O-5m-F2Z"/>
+                    <connections>
+                        <outlet property="bottomFlagButton" destination="epJ-GK-DrL" id="agr-tP-bg8"/>
+                        <outlet property="centerFlagButton" destination="bC2-lp-6AZ" id="zXi-OT-XNN"/>
+                        <outlet property="topFlagButton" destination="yti-S1-teZ" id="jcL-n0-LDj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,4 +82,9 @@
             <point key="canvasLocation" x="288" y="-205"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="france" width="200" height="100"/>
+        <image name="ireland" width="200" height="100"/>
+        <image name="spain" width="200" height="100"/>
+    </resources>
 </document>
