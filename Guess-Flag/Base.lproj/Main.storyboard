@@ -17,13 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-lp-6AZ">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-lp-6AZ">
                                 <rect key="frame" x="200" y="250" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="1Bf-9g-adi"/>
                                     <constraint firstAttribute="width" constant="200" id="ccR-7k-aIo"/>
                                 </constraints>
                                 <state key="normal" title="Center" image="france"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8A-vK-UDF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yti-S1-teZ">
                                 <rect key="frame" x="200" y="110" width="200" height="100"/>
@@ -32,14 +35,20 @@
                                     <constraint firstAttribute="height" constant="100" id="Vxs-3E-FVB"/>
                                 </constraints>
                                 <state key="normal" title="Top" image="ireland"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WwM-Gl-9r1"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epJ-GK-DrL">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epJ-GK-DrL">
                                 <rect key="frame" x="200" y="390" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Abk-tP-2L0"/>
                                     <constraint firstAttribute="width" constant="200" id="mBR-UE-H0t"/>
                                 </constraints>
                                 <state key="normal" title="Bottom" image="spain"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJz-4Y-Gzh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

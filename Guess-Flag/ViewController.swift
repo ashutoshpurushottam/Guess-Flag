@@ -35,23 +35,44 @@ class ViewController: UIViewController {
         askQuestions()
     }
     
-    func askQuestions()
+    // Passed UIAlertAction with default value nil
+    func askQuestions(action: UIAlertAction! = nil)
     {
         // Shuffle array
-        GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(countries)
+        countries = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(countries) as! [String]
+        // Generate random number between 0 and 2
+        correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
+
         
         topFlagButton.setImage(UIImage(named: countries[0]), forState: .Normal)
         centerFlagButton.setImage(UIImage(named: countries[1]), forState: .Normal)
         bottomFlagButton.setImage(UIImage(named: countries[2]), forState: .Normal)
         
-        // Generate random number between 0 and 2
-        correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
         
         // Set title 
         title = countries[correctAnswer].uppercaseString
         
     }
     
-
+    // MARK: -Actions
+    
+    @IBAction func buttonTapped(sender: UIButton)
+    {
+        // Check whether the user tapped the correct button
+        if sender.tag == correctAnswer
+        {
+            title = "Correct"
+            score++
+        }
+        else
+        {
+            title = "Wrong"
+            score--
+        }
+        
+        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler:askQuestions))
+        presentViewController(ac, animated: true, completion: nil)
+    }
 }
 
